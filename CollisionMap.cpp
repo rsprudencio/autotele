@@ -72,9 +72,11 @@ void CCollisionMap::AddCollisionData(const CollMap* pCol)
 
 BOOL CCollisionMap::IsValidAbsLocation(long x, long y) const
 {
-	if (!m_map.IsCreated())
+	if (!m_map.IsCreated()) {
 		return FALSE;
+	}
 	
+	// PrintText(FONTCOLOR_WHITE, "AbsLoc PosX: %d   PosY: %d   AbsX: %d   AbsY: %d", x, y, m_ptLevelOrigin.x, m_ptLevelOrigin.y);
 	x -= m_ptLevelOrigin.x;
 	y -= m_ptLevelOrigin.y;
 

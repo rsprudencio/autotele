@@ -32,7 +32,7 @@ typedef struct LevelExit_t
         DWORD dwTargetLevel;
         DWORD dwType;
         DWORD dwId;
-		Room2* pRoom;
+        Room2* pRoom;
 } LevelExit, *LPLevelExit;
 
 ////////////////////////////////////////////////////////////////

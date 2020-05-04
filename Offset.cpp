@@ -11,6 +11,7 @@ void LoadPatches()
 	
 	if(cReceivePacketHook)
 	{
+		PrintText(FONTCOLOR_ORANGE, "AutoTele: Loaded ReceivePacketHook patch");
 		Patches[PatchCount].pFunc = PatchCall;
 		Patches[PatchCount].dwAddr = GetDllOffset("D2Client.dll", 0xACE61);
 		Patches[PatchCount].dwFunc = (DWORD)GamePacketReceived_Intercept;
@@ -19,6 +20,7 @@ void LoadPatches()
 	}
 	if(cDrawHook)
 	{
+		PrintText(FONTCOLOR_ORANGE, "AutoTele: Loaded DrawHook patch");
 		Patches[PatchCount].pFunc = PatchCall;
 		Patches[PatchCount].dwAddr = GetDllOffset("D2Client.dll", 0xC3DAF);
 		Patches[PatchCount].dwFunc = (DWORD)GameDraw_Intercept;

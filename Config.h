@@ -21,6 +21,7 @@ extern int cNextButton;
 extern int cOtherButton;
 extern int cWaypointButton;
 extern int cPrevButton;
+extern int cDebug;
 extern bool cMessages;
 extern bool cColdToCave;
 extern bool cDrawHook;

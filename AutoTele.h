@@ -1,13 +1,14 @@
-POINT FindPresetUnitXY(DWORD dwType, DWORD dwTxtFileNo, DWORD dwTxtFileNo2, DWORD Area);
+//POINT FindPresetUnitXY(DWORD dwType, DWORD dwTxtFileNo, DWORD dwTxtFileNo2, DWORD Area);
 extern void DoTele(int VECTOR);
-int MakePath(int x, int y, DWORD Areas[], DWORD count, bool MoveThrough);
+void MakePath(int x, int y, DWORD Areas[], DWORD count, bool MoveThrough, DWORD InteractType, Room2 *InteractRoom);
+void MakePathObject(DWORD dwType, DWORD dwTxtFileNo, DWORD dwTxtFileNo2, DWORD Area);
 DWORD WINAPI TeleportThread(LPVOID P);
+DWORD WINAPI ManageTeleThread(LPVOID P);
 
 extern HANDLE TELEHANDLE;
+extern HANDLE TeleThread;
 DWORD GetUnitByXY(DWORD X, DWORD Y, Room2* pRoom);
 extern Room2* InteractRoom;
-extern POINT aPath[255];
-extern CArrayEx <POINT, POINT> Path;
 #define VALIDPTR(X) ( (X) && (!IsBadReadPtr(X,sizeof(X))) )
 
 typedef struct Vector_t

@@ -107,6 +107,9 @@ FUNCPTR(D2COMMON, GetRoomFromUnit,  Room1* __stdcall, (UnitAny * ptUnit), -10331
 
 VARPTR(D2CLIENT, PlayerArea, int, 0x11C34C)
 VARPTR(D2WIN, FirstControl, Control*, 0x214A0)
+VARPTR(D2WIN, ChatInputBox, DWORD*, 0x12A0D0)
+VARPTR(D2CLIENT, ChatMsg, wchar_t*, 0x11EC80)
+//VARPTR(D2MULTI, ChatInputBox, DWORD*, 0x3A0B0)
 VARPTR(D2CLIENT, ScreenSizeX, DWORD, 0xDBC48)
 VARPTR(D2CLIENT, ScreenSizeY, DWORD, 0xDBC4C)
 

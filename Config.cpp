@@ -4,6 +4,7 @@ int cNextButton = 0;
 int cOtherButton = 0;
 int cWaypointButton = 0;
 int cPrevButton = 0;
+int cDebug = 0;
 
 bool cMessages = 1;
 bool cColdToCave = 0;
@@ -19,6 +20,7 @@ ConfigEntry pEntries[] = {
 	{"Keys", "Other", "97", CONFIG_INT, &cOtherButton},
 	{"Keys", "Waypoint", "98", CONFIG_INT, &cWaypointButton},
 	{"Keys", "Prev", "99", CONFIG_INT, &cPrevButton},
+	{"Keys", "Debug", "220", CONFIG_INT, &cDebug},
 
 	{"Settings", "DisplayMessages", "1", CONFIG_BOOL, &cMessages},
 	{"Settings", "ColdToCave", "0", CONFIG_BOOL, &cColdToCave},
@@ -66,13 +68,13 @@ bool getBool(char* pLower)
 			if (pEntries[i].nType == CONFIG_BOOL)
 			{
 				*(PBOOL)pEntries[i].nVar = getBool(pValue);
-				Print("ÿc4[mMap]: ÿc0%s is now set to %i", pEntries[i].pKey, ((*(PBOOL)pEntries[i].nVar) ? "true" : "false"));
+				Print("ï¿½c4[mMap]: ï¿½c0%s is now set to %i", pEntries[i].pKey, ((*(PBOOL)pEntries[i].nVar) ? "true" : "false"));
 			} else if (pEntries[i].nType == CONFIG_INT) {
 				*(PINT)pEntries[i].nVar = atoi(pValue);
-				Print("ÿc4[mMap]: ÿc0%s is now set to %d", pEntries[i].pKey, *(PINT)pEntries[i].nVar);
+				Print("ï¿½c4[mMap]: ï¿½c0%s is now set to %d", pEntries[i].pKey, *(PINT)pEntries[i].nVar);
 			} else if (pEntries[i].nType == CONFIG_STRING) {
 				strncpy_s((PCHAR)pEntries[i].nVar, sizeof((PCHAR)pEntries[i].nVar), pValue, sizeof(pValue));
-				Print("ÿc4[mMap]: ÿc0%s is now set to %s", pEntries[i].pKey, (PCHAR)pEntries[i].nVar);
+				Print("ï¿½c4[mMap]: ï¿½c0%s is now set to %s", pEntries[i].pKey, (PCHAR)pEntries[i].nVar);
 			}
 				
 		}

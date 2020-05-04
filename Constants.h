@@ -783,6 +783,6 @@ enum {
 	// Item Stats
 	///////////////////////////////////////////////////
 #define ITEMSTAT_SOCKETS		0xC2
-#define AFFECT_JUST_PORTALED                                         102
+#define AFFECT_JUST_PORTALED	102
 
 #endif

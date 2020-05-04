@@ -10,3 +10,4 @@
 
 long CalculateDistance(const POINT& pt1, const POINT& pt2);
 long CalculateDistance(long x1, long y1, long x2, long y2);
+void debug(char fmt[], ...);

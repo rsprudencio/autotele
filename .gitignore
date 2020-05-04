@@ -1,3 +1,15 @@
-AutoTeleport.vcproj
+AutoTeleport.vcproj*
 AutoTeleport.sln
 AutoTeleport.suo
+*.obj
+*.pdb
+*.idb
+*.dll*
+*.ilk
+*.htm
+*.json
+*.ncb
+*.dep
+*.swp
+*~
+

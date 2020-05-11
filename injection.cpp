@@ -20,6 +20,14 @@ BOOL WINAPI DllMain(HINSTANCE hDll, DWORD dwReason, LPVOID lpReserved)
 		InstallPatchs();
 
 		PrintText(FONTCOLOR_BROWN, "AutoTele 2.0 by WhiteEvil, improved by rsprudencio"); //print text that module is loaded
+		
+#ifdef _DEBUG
+		dbg_file.open("./debug.log", std::ios::out | std::ios::app);
+		if (dbg_file.fail()) {
+			PrintText(FONTCOLOR_RED, "Failed to open debug.log");
+		}
+		PrintText(FONTCOLOR_RED, "Debug mode on!");
+#endif
 
 		return 1;
 	};

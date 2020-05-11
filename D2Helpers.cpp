@@ -285,6 +285,7 @@ LONG WINAPI GameEventHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 				start_telethread(GetPlayerArea() * 4 + WAYPOINT);
 				return NULL;
 			}
+#ifdef _DEBUG
 			if (wParam == cDebug)
 			{
 				PrintText(FONTCOLOR_WHITE, "CurX: %d   CurY: %d", D2CLIENT_GetPlayerUnit()->pPath->xPos, D2CLIENT_GetPlayerUnit()->pPath->yPos);
@@ -296,6 +297,7 @@ LONG WINAPI GameEventHandler(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 				dumpObjects();
 				return NULL;
 			}
+#endif
 		}
 	}
 	return (LONG)CallWindowProcA(oldWNDPROC, hWnd, uMsg, wParam, lParam);

@@ -20,8 +20,9 @@ ConfigEntry pEntries[] = {
 	{"Keys", "Other", "97", CONFIG_INT, &cOtherButton},
 	{"Keys", "Waypoint", "98", CONFIG_INT, &cWaypointButton},
 	{"Keys", "Prev", "99", CONFIG_INT, &cPrevButton},
-	{"Keys", "Debug", "220", CONFIG_INT, &cDebug},
-
+#ifdef _DEBUG
+	{"Keys", "Debug", "100", CONFIG_INT, &cDebug},
+#endif
 	{"Settings", "DisplayMessages", "1", CONFIG_BOOL, &cMessages},
 	{"Settings", "ColdToCave", "0", CONFIG_BOOL, &cColdToCave},
 
